@@ -35,7 +35,8 @@
                 <td><?= $user['role']; ?></td>
                 <td>
                   <a href="users-edit.php?id=<?= $user['id']; ?>" class="btn btn-success btn-sm">Edit</a>
-                  <a href="users-delete.php" class="btn btn-danger btn-sm mx-2 mr-4">Delete</a>
+                  <a href="users-delete.php?id=<?= $user['id']; ?>" class="btn btn-danger btn-sm mx-2 mr-4" onclick="return confirm('Are you sure?')">Delete</a>
+
                 </td>
               </tr>
           <?php

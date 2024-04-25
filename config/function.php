@@ -50,7 +50,7 @@ function getById($tableName, $id){
   global $conn;
   $table = validate($tableName);
   $id = validate($id);
-  $query = "SELECT * FROM $table WHERE ID='$id' LIMIT 1";
+  $query = "SELECT * FROM $table WHERE id='$id' LIMIT 1";
   $result = mysqli_query($conn, $query);
   if($result){
       if(mysqli_num_rows($result) == 1){
@@ -74,6 +74,16 @@ function getById($tableName, $id){
   }
   return $response; // Moved the return statement outside the if-else blocks
 }
+
+function deleteQuery($tableName, $id) {
+  global $conn;
+  $table = validate($tableName);
+  $id = validate($id);
+  $query = "DELETE FROM $table WHERE id='$id'";
+  $result = mysqli_query($conn, $query);
+  return $result;
+}
+
 
 
 ?>

@@ -1,4 +1,6 @@
-<?php include("includes/header.php"); ?>
+
+<?php 
+include("includes/header.php"); ?>
 <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css" rel="stylesheet" />
 <div class="row">
   <div class="col-md-12">
