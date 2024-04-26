@@ -24,19 +24,19 @@ include("includes/header.php"); ?>
         if ($user['status'] == 200) {
           ?>
 
-<input type="hidden" name="userId" value = "<?=$user['data']['id'];?>">
+<input type="hidden" name="userId" value = "<?=$user['data']['id'];?>" required>
 
           <div class="mb-3"><label>Name</label>
             <input type="text" name="name" value="<?= $user['data']['name']; ?>" class="form-control">
           </div>
           <div class="mb-3"><label>Phone No.</label>
-            <input type="number" name="Phone" value="<?= $user['data']['phone']; ?>" class="form-control">
+            <input type="number" name="phone" value="<?= $user['data']['phone']; ?>" class="form-control">
           </div>
           <div class="mb-3"><label>Email</label>
-            <input type="text" name="Email" value="<?= $user['data']['email']; ?>" class="form-control">
+            <input type="text" name="email" value="<?= $user['data']['email']; ?>" class="form-control">
           </div>
           <div class="mb-3"><label>Password</label>
-            <input type="text" name="Password" value="<?= $user['data']['password']; ?>" class="form-control">
+            <input type="text" name="password" value="<?= $user['data']['password']; ?>" class="form-control">
           </div>
           <div class="mb-3"><label>Select Role</label>
             <select name="role" class="form-select">

@@ -38,23 +38,24 @@ if (isset($_POST['saveuser'])) {
   
 if(isset($_POST['updateuser'])) {
   $name = validate($_POST['name']);
-  $phone = validate($_POST['phone']);
   $email = validate($_POST['email']);
+  $phone = validate($_POST['phone']);
   $password = validate($_POST['password']);
   $role = validate($_POST['role']);
-  $userId = validate($_GET['userId']);
+
+  $userId = validate($_POST['userId']);
   $user = getById('users', $userId);
   if ($user['status'] != 200) {
     redirect('users-edit.php?id='. $userId , 'No such Id found');
   }
 
   // Check if any of the required fields are empty
-  if ($name != '' && $email != '' && $phone != '' && $password != '') {
+  if ($name != '' || $email != '' || $phone != '' || $password != '') {
     // Prepare the SQL query
     $query = "UPDATE users SET 
-      name='$name',
+      name='$name', 
+      email='$email',
       phone='$phone', 
-      email='$email', 
       password='$password', 
       role='$role' 
       WHERE id='$userId'";
