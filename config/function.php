@@ -84,6 +84,12 @@ function deleteQuery($tableName, $id) {
   return $result;
 }
 
+function logoutSession(){
+  unset($_SESSION['auth']);
+  unset($_SESSION['loggedInUser']);
+  unset($_SESSION['loggedInUserRole']);
+}
+
 
 
 ?>

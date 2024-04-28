@@ -134,7 +134,7 @@
         </li>
     <div class="sidenav-footer mx-3 ">
 
-      <a class="btn bg-gradient-primary mt-3 w-100" href="logout.php">Logout</a>
+      <a class="btn bg-gradient-primary mt-3 w-100" href="includes/logout.php">Logout</a>
     </div>
   </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">

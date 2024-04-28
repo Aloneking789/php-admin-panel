@@ -1,5 +1,6 @@
 <?php
-require ('C:\xampp\htdocs\php-admin-panel\config\function.php')
+require ('C:\xampp\htdocs\php-admin-panel\config\function.php');
+include('authentication.php');
 ?>
 
 <!DOCTYPE html>
